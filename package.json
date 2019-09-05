@@ -1,0 +1,21 @@
+{
+  "name": "awaker-request",
+  "version": "1.0.0",
+  "description": "Send request in parallel to awake multiple websites.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awaker",
+    "request",
+    "awaker-request",
+    "nodejs"
+  ],
+  "author": "M ABD AZIZ ALFIAN",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "parallel-http-request": "^1.0.2"
+  }
+}
