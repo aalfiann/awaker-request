@@ -8,16 +8,16 @@ var config = require('./config.js');
 
 app.get('/', (req, res) => res.send(new Date().toISOString().replace('T',' ').replace('Z','').substr(0,19)+' : Hello World!'));
 
-app.listen(config.heroku.port, () => {
+app.listen(config.dev.port, () => {
     console.log('Started at '+timestamp);
-    console.log(`Awaker is listening on port ${config.heroku.port}!`);
-    console.log('Will awake for every '+config.heroku.refresh+'ms.');
+    console.log(`Awaker is listening on port ${config.dev.port}!`);
+    console.log('Will awake for every '+config.dev.refresh+'ms.');
 });
 
 setInterval(function(){
     request.clean();
-    for(let i in config.heroku.website) {
-        request.add(config.heroku.website[i]);
+    for(let i in config.dev.website) {
+        request.add(config.dev.website[i]);
     }
     request.send(function(response){
         response.forEach(function(v){ delete v.method; delete v.body; });
@@ -25,4 +25,4 @@ setInterval(function(){
         console.log('Refreshed at '+new Date().toISOString().replace('T',' ').replace('Z','').substr(0,19));
         console.log(response);
     })
-}, config.heroku.refresh);
+}, config.dev.refresh);

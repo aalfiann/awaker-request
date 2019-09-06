@@ -2,9 +2,13 @@
   "name": "awaker-request",
   "version": "1.0.0",
   "description": "Send request in parallel to awake multiple websites.",
-  "main": "app.js",
+  "main": "dev.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalfiann/awaker-request.git"
   },
   "keywords": [
     "awaker",
