@@ -8,15 +8,12 @@ wihout worry about sleep system in Heroku.
 1. Download / Clone this repo
 2. Go through this directory
 3. npm install
-4. Create `config.js` file
+4. Edit `config.js` file
 5. Deploy to heroku
 6. Done
 
 ### Config.js
-Just copy this below and edit the `website` part with yours.
 ```javascript
-var config = {};
-
 /**
  * config.dev is for development test
  */
@@ -41,8 +38,6 @@ config.heroku = {
         'https://another-website-in.herokuapp.com/' // your another heroku app website if any
     ]
 }
-
-module.exports = config;
 ```
 
 ### Development Environment
